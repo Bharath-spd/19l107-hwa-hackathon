@@ -6,6 +6,17 @@
   <title>Snufflewind — the wind-up foraging station for dogs</title>
   <meta name="description" content="Snufflewind is a wind-up foraging station that keeps your dog busy for about three hours. Twelve treat pockets, a mechanical clockwork carousel, no batteries and no app.">
   <meta name="theme-color" content="#FBF6EE">
+  <link rel="canonical" href="https://19l107-hwa-hackathon.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Snufflewind">
+  <meta property="og:title" content="Snufflewind — the wind-up foraging station for dogs">
+  <meta property="og:description" content="Snufflewind is a wind-up foraging station that keeps your dog busy for about three hours. Twelve treat pockets, a mechanical clockwork carousel, no batteries and no app.">
+  <meta property="og:url" content="https://19l107-hwa-hackathon.vercel.app/">
+  <meta property="og:image" content="https://19l107-hwa-hackathon.vercel.app/images/hero-dog.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Snufflewind — the wind-up foraging station for dogs">
+  <meta name="twitter:description" content="Snufflewind is a wind-up foraging station that keeps your dog busy for about three hours. Twelve treat pockets, a mechanical clockwork carousel, no batteries and no app.">
+  <meta name="twitter:image" content="https://19l107-hwa-hackathon.vercel.app/images/hero-dog.jpg">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="images/favicon.png" type="image/png" sizes="512x512">
   <link rel="apple-touch-icon" href="images/favicon.png">
@@ -14,6 +25,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/main.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://19l107-hwa-hackathon.vercel.app/#website",
+        "url": "https://19l107-hwa-hackathon.vercel.app/",
+        "name": "Snufflewind",
+        "description": "A wind-up foraging station that keeps dogs busy for about three hours.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Product",
+        "@id": "https://19l107-hwa-hackathon.vercel.app/#product",
+        "name": "Snufflewind",
+        "description": "A wind-up foraging station for dogs with twelve treat pockets, a brass winding key and a dishwasher-safe silicone tray. No batteries and no app.",
+        "image": [
+          "https://19l107-hwa-hackathon.vercel.app/images/product-lifestyle.jpg",
+          "https://19l107-hwa-hackathon.vercel.app/images/detail-window.jpg",
+          "https://19l107-hwa-hackathon.vercel.app/images/hero-dog.jpg"
+        ],
+        "brand": { "@type": "Brand", "name": "Snufflewind" },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "64.00",
+          "highPrice": "94.00",
+          "availability": "https://schema.org/InStock",
+          "url": "https://19l107-hwa-hackathon.vercel.app/product.html"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -216,17 +262,18 @@
       <div class="container">
         <div class="section__head section__head--center reveal">
           <p class="eyebrow">See it work</p>
-          <h2>Ten seconds of a very good afternoon.</h2>
-          <p>No editing tricks and no app: just one beagle, twelve pockets, and a tray that keeps giving.</p>
+          <h2>A very good afternoon, in about eleven seconds.</h2>
+          <p>No editing tricks and no app: just one very interested dog, twelve pockets, and a tray that keeps giving.</p>
         </div>
 
         <figure class="video-shell reveal">
-          <video class="video-shell__video" controls muted loop playsinline preload="metadata" poster="images/dog-using.jpg" width="1280" height="720" aria-label="A beagle nosing treats out of the teal Snufflewind tray while the carousel turns">
+          <video class="video-shell__video" controls muted loop playsinline preload="metadata" poster="images/dog-using.jpg" width="1280" height="720" data-autoplay-inview aria-label="A golden retriever foraging among the treats on the teal Snufflewind tray">
             <source src="videos/dog_foraging_video_edited.mp4" type="video/mp4">
+            <track src="videos/dog_foraging.vtt" kind="captions" srclang="en" label="English">
             <p>Your browser cannot play this video. <a href="videos/dog_foraging_video_edited.mp4">Download it instead</a>.</p>
           </video>
           <figcaption class="video-shell__caption">
-            <span><span class="video-shell__dot" aria-hidden="true"></span> Live loop · 10 seconds</span>
+            <span><span class="video-shell__dot" aria-hidden="true"></span> Live loop · about 11 seconds</span>
             <span>Sound on for the full snuffle.</span>
           </figcaption>
         </figure>
@@ -624,6 +671,17 @@
       </div>
     </div>
   </footer>
+
+  <div class="mobile-buy" id="mobileBuy" aria-hidden="true">
+    <div class="mobile-buy__price">
+      <strong>$79</strong>
+      <span>Medium · free shipping</span>
+    </div>
+    <a class="btn btn--primary" href="product.html" tabindex="-1">
+      Shop Snufflewind
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
 
   <div class="toast-stack" id="toastStack" role="status" aria-live="polite"></div>
 </body>

@@ -3504,6 +3504,65 @@ strong {
   color: var(--ink-soft);
 }
 
+/* ---------- Mobile buy bar ---------- */
+.mobile-buy {
+  position: fixed;
+  z-index: 90;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 9px 9px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transform: translateY(130%);
+  pointer-events: none;
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.mobile-buy.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobile-buy__price {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.mobile-buy__price strong {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.mobile-buy__price span {
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.mobile-buy .btn {
+  min-height: 44px;
+  padding: 10px 18px;
+  font-size: 0.92rem;
+}
+
+@media (min-width: 721px) {
+  .mobile-buy {
+    display: none;
+  }
+}
+
 /* ---------- Toast ---------- */
 .toast-stack {
   position: fixed;
@@ -3760,6 +3819,7 @@ strong {
 @media print {
   .site-header,
   .site-footer,
+  .mobile-buy,
   .toast-stack,
   .confirm-actions,
   .skip-link {

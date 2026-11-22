@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order confirmed — Snufflewind</title>
+  <meta name="description" content="Your Snufflewind order is confirmed. This is a demo store, so no payment has been taken.">
+  <meta name="theme-color" content="#FBF6EE">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%2312775A'/%3E%3Cg fill='%23FBF6EE'%3E%3Cellipse cx='50' cy='64' rx='17' ry='14'/%3E%3Cellipse cx='30' cy='45' rx='8' ry='10'/%3E%3Cellipse cx='43' cy='36' rx='8' ry='10'/%3E%3Cellipse cx='58' cy='36' rx='8' ry='10'/%3E%3Cellipse cx='71' cy='45' rx='8' ry='10'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/confirmation.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Snufflewind home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9c2.4-3.6 5.4-3.6 8 0 2.6 3.6 5.6 3.6 8 0"/><path d="M4 15c2.4-3.6 5.4-3.6 8 0 2.6 3.6 5.6 3.6 8 0"/></svg>
+        </span>
+        Snufflewind
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="product.html">Shop</a>
+        <a class="nav__link" href="index.html#how-it-works">How it works</a>
+        <a class="nav__link" href="faq.html">FAQ</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="cart-link" href="cart.html" data-cart-link aria-label="Cart, empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8h13l-1.1 11.1a2 2 0 0 1-2 1.9H8.6a2 2 0 0 1-2-1.9L5.5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+          <span class="cart-count is-empty" data-cart-count>0</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home <span aria-hidden="true">→</span></a>
+      <a href="product.html">Shop Snufflewind <span aria-hidden="true">→</span></a>
+      <a href="index.html#how-it-works">How it works <span aria-hidden="true">→</span></a>
+      <a href="index.html#why-dogs">Why dogs love it <span aria-hidden="true">→</span></a>
+      <a href="faq.html">FAQ <span aria-hidden="true">→</span></a>
+      <a href="contact.html">Contact <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container confirm-wrap" id="confirmWrap" hidden>
+      <div class="confirm-hero">
+        <div class="confirm-check" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+        </div>
+        <span class="pill pill--teal" style="margin-bottom:14px">Order confirmed</span>
+        <h1>Your Snufflewind is on its way.</h1>
+        <p>Thanks, <span id="customerName">friend</span>. Twelve pockets of afternoon entertainment are being packed up as we speak.</p>
+      </div>
+
+      <div class="order-card">
+        <div class="order-card__head">
+          <div>
+            <p>Order number</p>
+            <p class="order-number" id="orderNumber">SW-000000</p>
+          </div>
+          <span class="order-status"><span class="dot" aria-hidden="true"></span> Confirmed</span>
+        </div>
+
+        <div class="order-card__body">
+          <div class="order-lines" id="orderLines"></div>
+
+          <div class="order-card__cols">
+            <div class="order-block">
+              <h3>Delivery address</h3>
+              <address id="orderAddress"></address>
+            </div>
+
+            <div class="order-block">
+              <h3>Contact</h3>
+              <p id="orderContact"></p>
+              <p id="orderPayment" style="margin-top:6px;color:var(--ink-soft);font-size:0.84rem"></p>
+            </div>
+
+            <div class="order-block">
+              <h3>Estimated delivery</h3>
+              <p id="orderEta"></p>
+              <p id="orderPlaced" style="margin-top:6px;color:var(--ink-soft);font-size:0.84rem"></p>
+            </div>
+          </div>
+
+          <div class="order-totals">
+            <div class="totals">
+              <div class="totals__row"><span>Subtotal</span><span id="orderSubtotal">$0</span></div>
+              <div class="totals__row"><span>Shipping</span><span id="orderShipping">$0</span></div>
+              <div class="totals__row totals__row--total"><span>Total paid</span><span id="orderTotal">$0</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-note" style="margin-top:20px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 8v4M12 15.5v.5"/></svg>
+        <div>
+          <strong>This is a demo order</strong>
+          No payment was taken and no confirmation email has been sent. Your order details are saved in this browser only, so this page will still work if you refresh it.
+        </div>
+      </div>
+
+      <div class="confirm-actions">
+        <a class="btn btn--primary" href="product.html">
+          Continue shopping
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="index.html">Back to home</a>
+      </div>
+
+      <p style="text-align:center;margin-top:22px;font-size:0.86rem;color:var(--ink-soft)">
+        Need to change something? <a href="contact.html">Send us a message</a> with your order number.
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9c2.4-3.6 5.4-3.6 8 0 2.6 3.6 5.6 3.6 8 0"/><path d="M4 15c2.4-3.6 5.4-3.6 8 0 2.6 3.6 5.6 3.6 8 0"/></svg>
+            </span>
+            Snufflewind
+          </a>
+          <p>A wind-up foraging station that turns a long afternoon alone into three hours of sniffing, nudging and small happy discoveries.</p>
+        </div>
+
+        <div class="footer__col">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="product.html?size=small">Small · $64</a></li>
+            <li><a href="product.html?size=medium">Medium · $79</a></li>
+            <li><a href="product.html?size=large">Large · $94</a></li>
+            <li><a href="product.html#refill">Refill ring set · $18</a></li>
+            <li><a href="cart.html">Your cart</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="index.html#how-it-works">How it works</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="faq.html#shipping">Shipping &amp; returns</a></li>
+            <li><a href="faq.html#care">Care &amp; cleaning</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Say hello</h3>
+          <ul>
+            <li><a href="mailto:hello@snufflewind.com">hello@snufflewind.com</a></li>
+            <li><a href="contact.html">Send a message</a></li>
+            <li>Monday to Friday, 9–5</li>
+            <li>Replies within one working day</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> Snufflewind. Made for dogs who think with their noses.</p>
+        <p class="footer__note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          Demo store · no real payments are processed
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-stack" id="toastStack" role="status" aria-live="polite"></div>
+</body>
+</html>

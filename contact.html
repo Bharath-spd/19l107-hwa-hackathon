@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Snufflewind</title>
+  <meta name="description" content="Ask the Snufflewind team about sizing, orders, returns or care. We reply within one working day.">
+  <meta name="theme-color" content="#FBF6EE">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%2312775A'/%3E%3Cg fill='%23FBF6EE'%3E%3Cellipse cx='50' cy='64' rx='17' ry='14'/%3E%3Cellipse cx='30' cy='45' rx='8' ry='10'/%3E%3Cellipse cx='43' cy='36' rx='8' ry='10'/%3E%3Cellipse cx='58' cy='36' rx='8' ry='10'/%3E%3Cellipse cx='71' cy='45' rx='8' ry='10'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/contact.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Snufflewind home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9c2.4-3.6 5.4-3.6 8 0 2.6 3.6 5.6 3.6 8 0"/><path d="M4 15c2.4-3.6 5.4-3.6 8 0 2.6 3.6 5.6 3.6 8 0"/></svg>
+        </span>
+        Snufflewind
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="product.html">Shop</a>
+        <a class="nav__link" href="index.html#how-it-works">How it works</a>
+        <a class="nav__link" href="faq.html">FAQ</a>
+        <a class="nav__link" href="contact.html" aria-current="page">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="cart-link" href="cart.html" data-cart-link aria-label="Cart, empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8h13l-1.1 11.1a2 2 0 0 1-2 1.9H8.6a2 2 0 0 1-2-1.9L5.5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+          <span class="cart-count is-empty" data-cart-count>0</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home <span aria-hidden="true">→</span></a>
+      <a href="product.html">Shop Snufflewind <span aria-hidden="true">→</span></a>
+      <a href="index.html#how-it-works">How it works <span aria-hidden="true">→</span></a>
+      <a href="index.html#why-dogs">Why dogs love it <span aria-hidden="true">→</span></a>
+      <a href="faq.html">FAQ <span aria-hidden="true">→</span></a>
+      <a href="contact.html" aria-current="page">Contact <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb" style="padding-top:22px">
+        <a href="index.html">Home</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+        <span aria-current="page">Contact</span>
+      </nav>
+
+      <div class="page-head">
+        <p class="eyebrow">Talk to a human</p>
+        <h1>How can we help?</h1>
+        <p>Sizing second opinions, order changes, returns, or a question about the clockwork — send it over. We answer every message within one working day, Monday to Friday.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <div class="form-card" id="contactFormCard">
+            <form id="contactForm" novalidate>
+              <div class="form-error-summary" id="contactErrors" role="alert">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8v5"/><circle cx="12" cy="16.5" r=".8" fill="currentColor" stroke="none"/><path d="M10.3 3.9 2.6 17.4A2 2 0 0 0 4.3 20.4h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+                <span id="contactErrorsText">Please check the highlighted fields.</span>
+              </div>
+
+              <div class="form-grid form-grid--2">
+                <div class="field" data-field="name">
+                  <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="name" name="name" autocomplete="name" placeholder="Alex Morgan" required aria-describedby="err-name">
+                  <p class="field__error" id="err-name"></p>
+                </div>
+
+                <div class="field" data-field="email">
+                  <label for="email">Email address <span class="req" aria-hidden="true">*</span></label>
+                  <input type="email" id="email" name="email" autocomplete="email" placeholder="alex@example.com" required aria-describedby="err-email">
+                  <p class="field__error" id="err-email"></p>
+                </div>
+
+                <div class="field" data-field="topic">
+                  <label for="topic">What is it about? <span class="req" aria-hidden="true">*</span></label>
+                  <select id="topic" name="topic" required aria-describedby="err-topic">
+                    <option value="">Choose a topic</option>
+                    <option value="Sizing help">Sizing help</option>
+                    <option value="An existing order">An existing order</option>
+                    <option value="Returns or warranty">Returns or warranty</option>
+                    <option value="Care and cleaning">Care and cleaning</option>
+                    <option value="Wholesale or press">Wholesale or press</option>
+                    <option value="Something else">Something else</option>
+                  </select>
+                  <p class="field__error" id="err-topic"></p>
+                </div>
+
+                <div class="field" data-field="order">
+                  <label for="order">Order number <span class="price-note">(optional)</span></label>
+                  <input type="text" id="order" name="order" placeholder="SW-ABC123" aria-describedby="err-order">
+                  <p class="field__error" id="err-order"></p>
+                </div>
+
+                <div class="field field--wide" data-field="message">
+                  <label for="message">Your message <span class="req" aria-hidden="true">*</span></label>
+                  <textarea id="message" name="message" rows="6" placeholder="Tell us a little about your dog, your order, or the thing you are wondering about." required aria-describedby="err-message"></textarea>
+                  <p class="field__hint">A few details help us answer properly — your dog's weight and breed are useful for sizing questions.</p>
+                  <p class="field__error" id="err-message"></p>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn btn--primary btn--lg" type="submit">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-7-7 18-2.5-7.5L3 11Z"/></svg>
+                  Send message
+                </button>
+                <p class="secure-note">Demo store — your message is saved in this browser only.</p>
+              </div>
+            </form>
+          </div>
+
+          <div class="form-success" id="contactSuccess" role="status" aria-live="polite" tabindex="-1">
+            <div class="form-success__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+            </div>
+            <h2>Message sent</h2>
+            <p>Thanks, <span id="successName">friend</span>. We have your note and will reply within one working day. In the meantime, the <a href="faq.html">FAQ</a> may have a quick answer.</p>
+            <span class="form-success__ref" id="successRef">Reference MSG-0000</span>
+            <div>
+              <button class="btn btn--quiet" type="button" id="sendAnother">Send another message</button>
+              <a class="btn btn--ghost" href="product.html">Back to the shop</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="contact-aside">
+          <div class="contact-card contact-card--teal">
+            <h2>Email us directly</h2>
+            <p><a href="mailto:hello@snufflewind.com">hello@snufflewind.com</a></p>
+            <p style="margin-top:8px">Monday to Friday, 9–5. We read everything, usually with a dog on our feet.</p>
+          </div>
+
+          <div class="contact-card">
+            <h2>Order or return?</h2>
+            <p>Include your order number (it looks like SW-ABC123) and we can sort it out faster. You will find it on your confirmation page.</p>
+          </div>
+
+          <div class="contact-card">
+            <h2>Quick answers</h2>
+            <p><a href="faq.html#shipping">Shipping &amp; returns</a><br>
+              <a href="faq.html#care">Care &amp; cleaning</a><br>
+              <a href="faq.html#sizesHeading">Choosing a size</a></p>
+          </div>
+
+          <div class="contact-card">
+            <h2>Sizing second opinion</h2>
+            <p>Tell us your dog's breed, weight and how quickly they empty a bowl. We will happily point you at the right size — even if it is the cheaper one.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9c2.4-3.6 5.4-3.6 8 0 2.6 3.6 5.6 3.6 8 0"/><path d="M4 15c2.4-3.6 5.4-3.6 8 0 2.6 3.6 5.6 3.6 8 0"/></svg>
+            </span>
+            Snufflewind
+          </a>
+          <p>A wind-up foraging station that turns a long afternoon alone into three hours of sniffing, nudging and small happy discoveries.</p>
+        </div>
+
+        <div class="footer__col">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="product.html?size=small">Small · $64</a></li>
+            <li><a href="product.html?size=medium">Medium · $79</a></li>
+            <li><a href="product.html?size=large">Large · $94</a></li>
+            <li><a href="product.html#refill">Refill ring set · $18</a></li>
+            <li><a href="cart.html">Your cart</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="index.html#how-it-works">How it works</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="faq.html#shipping">Shipping &amp; returns</a></li>
+            <li><a href="faq.html#care">Care &amp; cleaning</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Say hello</h3>
+          <ul>
+            <li><a href="mailto:hello@snufflewind.com">hello@snufflewind.com</a></li>
+            <li><a href="contact.html">Send a message</a></li>
+            <li>Monday to Friday, 9–5</li>
+            <li>Replies within one working day</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> Snufflewind. Made for dogs who think with their noses.</p>
+        <p class="footer__note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          Demo store · no real payments are processed
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-stack" id="toastStack" role="status" aria-live="polite"></div>
+</body>
+</html>
